@@ -70,17 +70,14 @@ int main() {
         // TODO 3: baca durasi dengan aman (bilangan bulat 1 sampai 24), pola seperti jumlah di atas.
         //         Pesan penolakan: "Harus bilangan bulat 1 sampai 24. Durasi (jam): "
         cout << "Durasi (jam, 1-24): ";
-cin >> durasi;
-
-while (cin.fail() || durasi < 1 || durasi > 24) {
-    cin.clear();
-    cin.ignore(1000, '\n');
-
-    cout << "Harus bilangan bulat 1 sampai 24. Durasi (jam): ";
-    cin >> durasi;
-}
-
-cin.ignore(1000, '\n');
+        cin >> durasi;
+        cin.ignore(1000, '\n');
+        while (cin.fail() || durasi < 1 || durasi > 24) {
+            cin.clear();
+            cin.ignore(1000, '\n');
+            cout << "Harus bilangan bulat 1 sampai 24. Durasi (jam): ";
+            cin >> durasi;
+            cin.ignore(1000, '\n');
         }
 
         // TODO 4: hitung biaya dan tentukan nama_jenis ("Motor" atau "Mobil"):
